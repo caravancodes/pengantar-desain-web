@@ -1,0 +1,169 @@
+.body {
+    background-image: url("batik.png");
+    background-repeat: repeat-y-x;
+
+}
+
+.slider {
+	width: 900px;
+	margin: 0em auto;
+	
+}
+
+.slider-wrapper {
+	width: 100%;
+	height: 300px;
+	position: relative;
+}
+
+.slide {
+	float: left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 3s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+	opacity: 1;
+}
+
+/*bagian header*/
+.wrap{
+	background: white;
+	width: 900px;
+	margin: 0px auto;
+}
+
+/*bagian header*/
+.wrap .header{
+	background: green;
+	/*height: 50px;*/
+	padding: 2px 10px;
+}
+
+/*akhir header*/
+
+.clear{
+	clear: both;
+}
+
+.badan{
+	height: 450px;
+	background: white;
+	
+}
+
+.wrap .badan .sidebar{
+	background: white;
+	float: right;	
+	width: 25%;
+	height: 100%;	
+}
+
+.wrap .badan .sidebar .sid{
+	background: white;
+	float: right;	
+	padding: 35px;	
+}
+
+.wrap .badan .content{
+	background: white;
+	float: left;
+	height: auto;
+	width: 75%;
+}
+
+.wrap .badan .content .isi{
+	background: lightgrey;
+	padding: 35px;	
+
+}
+
+.wrap .badan .content .form {
+width: 570px;
+background-color: #f2f2f2;
+padding: 20px;
+margin: center;
+background: grey;
+}
+
+.wrap .footer{
+	width: auto;
+	padding: 10px;
+	background: black;
+	color: white;
+}
+
+.navbar{
+    display: block;
+    float:left;
+    background: black;
+    width: 100%;
+}
+.navbar ul{
+    display: block;
+    list-style-type: none;
+    padding: 5px;
+    margin: 0px;
+}
+.navbar ul li{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    position: relative;
+}
+.navbar ul li a{
+    display: block;
+    padding: 20px 10px;
+    margin: 0px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+.navbar ul li a:hover{
+    transition: 0.2s ease-in-out;
+    background-color: red;
+}
+.navbar ul li ul{
+    display: none;
+    position: absolute;
+}
+.navbar ul li ul li{
+    display: block;
+    width: 100px;
+    margin: 0px;
+}
+.navbar ul li ul li a{
+    display:block;
+    padding: 10px 5px;
+    margin: 0px;
+    background-color: grey;
+}
+
+.navbar ul li:hover ul{
+display: block;
+}
+
+
+
+p{
+text-align: justify;
+}
+
+.textisi {
+size: 24px;
+}
+
+.img_article{
+float: left;
+margin: 0px 15px 0px 0px;
+width: 350px;
+height: 200px;
+border: 1px solid grey;
+padding: 10px;
+backgorund: white;
+}

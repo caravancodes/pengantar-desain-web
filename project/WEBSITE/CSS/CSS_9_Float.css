@@ -1,0 +1,10 @@
+img {
+float: right;
+width: 1200px;
+color: blue;
+background-color: red;
+margin: 0 0 15px 20px;
+padding: 15px;
+border: 1px solid black;
+text-align:center;
+}

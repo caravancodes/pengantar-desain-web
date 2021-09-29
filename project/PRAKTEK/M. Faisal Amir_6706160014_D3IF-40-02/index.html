@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>..:: AMIR WEBSITE ::..</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="CircleX.png">
+</head>
+<body class="body">
+<script>
+(function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+				
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+				
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#main-slider" );
+		
+	});
+	
+	
+})();
+
+</script>
+<div class="wrap">
+<div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="gambar/01.jpg" alt="First" class="slide" /><!-- slides -->
+		<img src="gambar/02.jpg" alt="Second" class="slide" />
+		<img src="gambar/03.jpg" alt="Third" class="slide" />
+	</div>
+</div>	
+
+<div class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">About Indonesia</a>
+<ul>
+<li><a href="culture.html">Culture</a></li>
+<li><a href="art.html">Art</a></li>
+</ul>
+</li>
+<li><a href="video.html">Videos</a></li>
+<li><a href="map.html">Maps</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="tamu.html">Guess Book</a></li>				
+</ul>
+</div>
+<div class="badan">			
+<div class="sidebar">
+<div class="sid">
+<b>Links</b>
+<ul>
+<li><a href="#">Indonesia Tourism</a></li>
+<li><a href="#">Travel Indonesia</a></li>
+<li><a href="#">Ministry Of Tourism</a></li>			
+</ul>
+</div>
+</div>
+<div class="content">
+<div class="isi">
+<h2>Bali Island</h2>
+<br>
+<img class="img_article" src="gambar/bali.jpg" alt="rajaampat">
+<p>Bali Island, the perfect holiday destination for all ages offers something for everyone. 
+Bali offers not just various customs but also various "adrenalin pump" parks. 
+Many exciting amusements are available in Bali, with something new opening all the time. 
+The number of offshore and inland attraction are on the rise because many tourists want them. 
+This tropical paradise has a unique blend of modern tourist facilities combined with wonderful shopping and a rich past and heritage. 
+After white water rafting that has gained popularity in Bali, comes offshore rafting or ocean rafting. 
+The more adventurous sort of amusement has now become an alternative sport for tourists. 
+Meanwhile white water rafting is still a popular activity with trips on Ayung, Telaga Waja, Unda Rivers, etc. 
+The tourists can refresh their mind by watching beautiful scenery along the route. 
+Those are not enough, some of the best surfing beaches in the world can be found on the western side of the island whilst conversely 
+the eastern side is a wonderful haven for families, with beautiful white sand beaches and gentle seas.</p>
+<br style="clear: both;" /></p>
+<h2>Raja Ampat</h2>
+<br>
+<img class="img_article" src="gambar/rajaampat.jpg" alt="rajaampat">
+<p>Raja Ampat, is a regency and groups of islands that located in the tip of Bird's Head Peninsula on the island of New Guinea, 
+precisely in West Papua province. Raja Ampat has 610 islands, which is only 35 islands that have been inhabited, 
+the rest areun inhabited and even nameless. The famous islands in Raja Ampat are Misool island, Salawati, Batanta, and Waigeo island.
+The area of Raja Ampat is often touted as the best reef areas in the world. The marine biota has beauty that can easily captivated by the tourists.
+The origin name of Raja Ampat,according to local myth, is coming from a woman who found seven eggs. 
+Four grains of which hatch into four princes who separated and each became the king who ruled in Waigeo, Salawati, East Misool and West Misool. 
+Meanwhile, three other eggs became a ghost, a woman, and a stone. 
+The area's massive coral colonies along with relatively high sea surface temperatures, also suggest that its reefs may be relatively 
+resistant to threats like coral bleaching and coral disease, which now jeopardize the survival of other coral ecosystems around the world. 
+The Raja Ampat islands are remote and relatively undisturbed by humans.</p>
+<br style="clear: both;" /></p>
+<h2>Prambanan Temple</h2>
+<br>
+<img class="img_article" src="gambar/prambanan.jpg" alt="rajaampat">
+<p>This is the most famous and also the most magnificent of Central Java's temples or more precisely complex of temples. 
+Situated about 15 kilometers from Yogyakarta, the top of the main shrine is visible from a great distance and rises high above 
+the scattered ruins of the former temples. Prambanan is the masterpiece of Hindu culture of the tenth century. 
+The slim building soaring up to 47 meters makes its beautiful architecture incomparable. 
+Seventeen kilometers east of Yogyakarta, King Balitung Maha Sambu built the Prambanan temple in the middle of the ninth century. 
+Its parapets are adorned with bas-reliefs depicting the famous Ramayana story. 
+This magnificent Shivaite temple derives it name from the village where it is located. 
+Prambanan Temple is locally known as the Roro Jonggrang Temple, or the Temple of the "Slender Virgin", 
+it is the biggest and most beautiful Hindu temple in Indonesia. The temple complex of Prambanan lies among green fields and villages. 
+It has eight shrines, of which the three main ones are dedicated to Shiva, Vishnu and Brahma. 
+<br style="clear: both;" /></p>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+<center>&copy MUHAMMAD FAISAL AMIR - 6706160014 - D3IF-40-02 - TELKOM UNIVERSITY</center>
+</div>
+</div>
+</body>
+</html>

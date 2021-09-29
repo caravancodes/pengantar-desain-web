@@ -1,0 +1,37 @@
+body {
+backgorund-color : pink;
+background-image : url("happy-fairy-tail-minimalistic-wallpaper-by-greenmapple17.png");
+/* background-size : 1024px 1024px; */
+background-repeat : no repeat;
+backgournd-attachment : fixed;
+background-position : center ;
+}
+
+h1 {
+color : white;
+text-align : justify;
+}
+
+p {
+color : black;
+text-align : justify;
+}
+
+.layout{
+..................
+}
+
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden{border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+
+
+/*border-style; border-width*/

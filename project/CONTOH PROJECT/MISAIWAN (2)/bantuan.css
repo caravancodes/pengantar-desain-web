@@ -1,0 +1,28 @@
+footer{
+    display: block;
+    background-color: rgba(0,0,0,0.9);
+    color: white}
+footer div.footerwidth{
+    width: 80%;
+    margin: 20px auto 0;
+    padding: 20px;
+}
+footer div.footerwidth div.footer{
+    width: 24.5%;
+    text-decoration: none;
+    display: inline-block;
+}
+footer div.footerwidth div.footer ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+footer div.footerwidth div.footer ul li{
+}
+footer div.footerwidth div.footer ul li a{
+    text-align: left;
+}
+
+.lapor {
+    position: relative;
+    margin: 10px 0px 10px 40px;
+}

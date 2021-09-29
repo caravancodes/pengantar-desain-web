@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>..:: AMIR WEBSITE ::..</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="CircleX.png">
+</head>
+<body class="body">
+<script>
+(function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+				
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+				
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#main-slider" );
+		
+	});
+	
+	
+})();
+
+</script>
+<div class="wrap">
+<div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="gambar/01.jpg" alt="First" class="slide" /><!-- slides -->
+		<img src="gambar/02.jpg" alt="Second" class="slide" />
+		<img src="gambar/03.jpg" alt="Third" class="slide" />
+	</div>
+</div>	
+
+<div class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">About Indonesia</a>
+<ul>
+<li><a href="culture.html">Culture</a></li>
+<li><a href="art.html">Art</a></li>
+</ul>
+</li>
+<li><a href="video.html">Videos</a></li>
+<li><a href="map.html">Maps</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="tamu.html">Guess Book</a></li>				
+</ul>
+</div>
+<div class="badan">			
+<div class="sidebar">
+<div class="sid">
+<b>Links</b>
+<ul>
+<li><a href="#">Indonesia Tourism</a></li>
+<li><a href="#">Travel Indonesia</a></li>
+<li><a href="#">Ministry Of Tourism</a></li>			
+</ul>
+</div>
+</div>
+<div class="content">
+<div class="isi">
+
+<h3>PETA INDONESIA</h3>
+<iframe src="https://www.google.co.id/maps/place/Bali/@-8.4543385,114.511032,9z/data=!3m1!4b1!4m5!3m4!1s0x2dd22f7520fca7d3:0x2872b62cc456cd84!8m2!3d-8.3405389!4d115.0919509" width="620" height="440" name="iframe_a"></iframe>
+
+
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+<center>&copy MUHAMMAD FAISAL AMIR - 6706160014 - D3IF-40-02 - TELKOM UNIVERSITY</center>
+</div>
+</div>
+</body>
+</html>

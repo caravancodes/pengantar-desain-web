@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>image to use</p>
+<img id ="scream" src="testimage.jpg" alt="The Scream" width="200" height="125">
+<p>Canvas to fill:</p>
+
+<canvas id ="myCanvas" width="200" height="100" style="border:3px solid green;"></canvas>
+
+<p><button onclick="myCanvasTest()">Try it</button></p>
+
+<script>
+function myCanvasTest() {
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var img = document.getElementById("scream");
+ctx.drawImage(img,10,10 50, 100);
+}
+</script>
+
+</body>
+</html>

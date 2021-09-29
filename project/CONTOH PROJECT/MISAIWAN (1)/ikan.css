@@ -1,0 +1,68 @@
+div.bodyinside {
+                padding: 0px 75px;
+                height: auto;
+                min-height: 1250px;
+            }
+
+
+            div.images {
+                width: 320px;
+                height: 0px;
+                position: relative;
+                padding: 20px 0px 0px 0px;
+            }
+
+            img.pic {
+            border-radius: 20px;
+            width: 300px;
+            height: 200px;
+            box-shadow: 0px 5px 20px 0px grey;
+            position: relative;
+            margin: 20px 0px;
+            opacity: 0.7;
+         }
+
+           div.text {
+                width: 320px;
+                height: 0px;
+                position: relative;
+                padding: 0px 0px 5px 0px;
+                margin: 0px 0px 0px 320px;
+            }
+
+            div.isitext {
+            width: 300px;
+            height: 200px;
+            padding: 20px 0px 25px 30px;
+            position: relative;
+      
+         }
+
+
+         a {
+            text-decoration: none;
+            color: white;
+         }
+
+         p.namaikan {
+            font-family: Arial;
+            font-size: 30px;
+            color: #004D40;
+            font-style: italic;
+            font-weight: bold;
+         }
+
+         p.harga {
+            font-family: Arial;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+            margin: -30px 0px 0px 0px;
+
+         }
+
+         img.pic:hover {
+            transform: scale(1.2);
+            opacity: 1;
+
+         }

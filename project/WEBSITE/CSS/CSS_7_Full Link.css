@@ -1,0 +1,20 @@
+a.one:link {color:blue;}
+a.one:visited {color:blue;}
+a.one:hover {color:blue;}
+
+a.two:link {color:blue;}
+a.two:visited {color:blue;}
+a.two:hover {font-size:150%;}
+
+a.three:link {color:blue;}
+a.three:visited {color:blue;}
+a.three:hover {background:green;}
+
+a.four:link {color:blue;}
+a.four:visited {color:blue;}
+a.four:hover {font -family:monospace;}
+
+a.five:link {color:blue;text-decoration:none;}
+a.five:visited {color:blue;text-decoration:none;}
+a.five:hover {text-decoration:underline;}
+

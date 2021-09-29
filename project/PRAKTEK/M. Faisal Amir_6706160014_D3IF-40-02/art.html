@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>..:: AMIR WEBSITE ::..</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="CircleX.png">
+</head>
+<body class="body">
+<script>
+(function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+				
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+				
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#main-slider" );
+		
+	});
+	
+	
+})();
+
+</script>
+<div class="wrap">
+<div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="gambar/01.jpg" alt="First" class="slide" /><!-- slides -->
+		<img src="gambar/02.jpg" alt="Second" class="slide" />
+		<img src="gambar/03.jpg" alt="Third" class="slide" />
+	</div>
+</div>	
+
+<div class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">About Indonesia</a>
+<ul>
+<li><a href="culture.html">Culture</a></li>
+<li><a href="art.html">Art</a></li>
+</ul>
+</li>
+<li><a href="video.html">Videos</a></li>
+<li><a href="map.html">Maps</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="tamu.html">Guess Book</a></li>				
+</ul>
+</div>
+<div class="badan">			
+<div class="sidebar">
+<div class="sid">
+<b>Links</b>
+<ul>
+<li><a href="#">Indonesia Tourism</a></li>
+<li><a href="#">Travel Indonesia</a></li>
+<li><a href="#">Ministry Of Tourism</a></li>			
+</ul>
+</div>
+</div>
+<div class="content">
+<div class="isi">
+
+<p>One of the many pleasures of living in Indonesia is having the opportunity to learn about and collect Indonesian Balinese Masksarts and handicrafts. The diversity evident in Indonesia's 300 plus ethnic groups is reflected in the diversity of its art forms. Just as every ethnic group throughout the archipelago has its own language/dialect, cuisine, traditional dress and traditional homes and they have also developed their own textiles, ornaments, carvings and items for daily use and special celebrations. The rich cultural heritage of art and handicrafts is one of Indonesia's true national riches.</p>
+<br style="clear: both;" /></p>
+
+<p>Indonesian art forms can include designs traced back to early animistic beliefs, ancestor worship, Hindu or Buddhist influenced motifs brought by Indian traders, Chinese or Islamic symbols and beliefs. Foreign influence on Indonesian art forms was brought about by centuries of exposure to other cultures through trade. Immigrants from China, India, the Arab world and later Europe traveled to the archipelago in search of the unique spices grown in Indonesia. These traders settled and brought with them rich artistic traditions which influenced the development of local art.
+
+Making of BatikToday we can see highly developed art forms wherever these artisans had patrons in centuries past. One of the places where this is perhaps most evident is in Yogyakarta where the Sultan's family has supported batik, silver, wayang and other artisans for generations. With this patronage the art forms flourished, resulting in a rich variety of art forms today.
+
+The rich artistic traditions of Bali, where traditionally each person must develop skills in a particular art form - be it dance, music, or visual arts has lead to the creation of a vibrant artistic community. Foreign artists have been drawn to Bali for centuries due to this unique cultural synergy.
+
+Handicrafts also developed from the usage of every day household items which were decorated and used for ceremonial purposes. Witness the wide variety of uses of natural woods, fibers, bamboo, rattan and grasses. Natural and chemical dyes, beads and other natural ornamentation are used to decorate these items, many of which have developed over time into distinctive art forms.
+
+Many expats take advantage of the opportunity of living in Indonesia to learn more about its culture, or to begin a Wayang Kulit Puppeteercollection of art objects or handicrafts that they enjoy. We go through early days of explorations, through the thrills of discovery and learning, to hunting down particular items you want and acquiring true finds.</p>
+<br style="clear: both;" /></p>
+<br>
+
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+<center>&copy MUHAMMAD FAISAL AMIR - 6706160014 - D3IF-40-02 - TELKOM UNIVERSITY</center>
+</div>
+</div>
+</body>
+</html>

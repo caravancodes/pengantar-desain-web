@@ -1,0 +1,36 @@
+.wrapper {
+background-color: red;
+}
+
+header {
+height: 160px;
+background: linear-gradient(to right, silver, blue);
+}
+h1 {
+color: white;
+}
+nav, footer {
+clear: both;
+color: black;
+background-color: lightblue;
+height: 30px
+}
+nav ul {
+margin: 0px;
+padding: 5px 0px 5px 30px;
+}
+nav li {
+display: inline;
+margin-right: 40px;
+}
+nav li a {
+color: black;
+}
+nav li a:hover, nav li a.current {
+color: white;
+}
+
+aside {
+background-color: white;
+
+}

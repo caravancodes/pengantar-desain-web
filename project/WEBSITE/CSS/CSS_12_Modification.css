@@ -1,0 +1,10 @@
+p {
+display: none;
+background-color: lightblue;
+padding: 20px;
+color: blue;
+}
+
+div:hover p {
+display: block;
+}

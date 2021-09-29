@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>..:: AMIR WEBSITE ::..</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" href="CircleX.png">
+</head>
+<body class="body">
+<script>
+(function() {
+	
+	function Slideshow( element ) {
+		this.el = document.querySelector( element );
+		this.init();
+	}
+	
+	Slideshow.prototype = {
+		init: function() {
+			this.wrapper = this.el.querySelector( ".slider-wrapper" );
+			this.slides = this.el.querySelectorAll( ".slide" );
+			this.previous = this.el.querySelector( ".slider-previous" );
+			this.next = this.el.querySelector( ".slider-next" );
+			this.index = 0;
+			this.total = this.slides.length;
+			this.timer = null;
+			
+			this.action();
+			this.stopStart();	
+		},
+		_slideTo: function( slide ) {
+			var currentSlide = this.slides[slide];
+			currentSlide.style.opacity = 1;
+			
+			for( var i = 0; i < this.slides.length; i++ ) {
+				var slide = this.slides[i];
+				if( slide !== currentSlide ) {
+					slide.style.opacity = 0;
+				}
+			}
+		},
+		action: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.index++;
+				if( self.index == self.slides.length ) {
+					self.index = 0;
+				}
+				self._slideTo( self.index );
+				
+			}, 3000);
+		},
+		stopStart: function() {
+			var self = this;
+			self.el.addEventListener( "mouseover", function() {
+				clearInterval( self.timer );
+				self.timer = null;
+				
+			}, false);
+			self.el.addEventListener( "mouseout", function() {
+				self.action();
+				
+			}, false);
+		}
+		
+		
+	};
+	
+	document.addEventListener( "DOMContentLoaded", function() {
+		
+		var slider = new Slideshow( "#main-slider" );
+		
+	});
+	
+	
+})();
+
+</script>
+<div class="wrap">
+<div class="slider" id="main-slider"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		<img src="gambar/01.jpg" alt="First" class="slide" /><!-- slides -->
+		<img src="gambar/02.jpg" alt="Second" class="slide" />
+		<img src="gambar/03.jpg" alt="Third" class="slide" />
+	</div>
+</div>	
+
+<div class="navbar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="#">About Indonesia</a>
+<ul>
+<li><a href="culture.html">Culture</a></li>
+<li><a href="art.html">Art</a></li>
+</ul>
+</li>
+<li><a href="video.html">Videos</a></li>
+<li><a href="map.html">Maps</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="tamu.html">Guess Book</a></li>				
+</ul>
+</div>
+<div class="badan">			
+<div class="sidebar">
+<div class="sid">
+<b>Links</b>
+<ul>
+<li><a href="#">Indonesia Tourism</a></li>
+<li><a href="#">Travel Indonesia</a></li>
+<li><a href="#">Ministry Of Tourism</a></li>			
+</ul>
+</div>
+</div>
+<div class="content">
+<div class="isi">
+<p>
+Indonesian art forms are rich in symbolism. The mythical naga or dragon; the mamuli pendant - symbol of fertility from Sumba, the tree of life, the mythological beast Garuda (also a national symbol found on the Panca SilaGaruda Carvingsymbol), all have special meanings in Indonesian traditions, myths and beliefs. Exploring the origins of these designs and what they mean is fascinating.
+
+The war between good and evil, ancient stories of love and warfare, nature and the heavens - all have special meanings to Indonesians throughout the archipelago. Gods, demons and knights abound in Balinese carvings and in other areas where Hindu influence predominated at some point in history. Plants, animals (mythological and real) and geometric forms are also widely used and represent specific meanings in particular art forms.
+
+Motifs drawn from nature - leaves, flowers, mountains, water, clouds, animals often represent religious or mystical symbols related to early forms of animism, then later to Hinduism. Islamic prohibitions against showing the human figure or other living creatures stagnated the development of many art forms in areas where Islam was strong.
+
+Certain motifs were favored and even restricted to the royal families, especially in batik designs for the Surakarta and Yogyakarta royal families (one of which is called the broken keris). These symbols depicted simple, natural Parang Batik designobjects that were important to the lives of Javanese, such as the leaves of the aren palm or the fruit from the kapok tree. Traditional colors of navy blue, cream, brown and black used in batik have given way to a myriad of colors utilizing modern imported dyes.
+
+Handicrafts and art objects range from every day items which are unique to Indonesia, to one-of-a-kind collector's items, with a very wide range in between. What you will buy and/or collect depends of course on what you like. To introduce you briefly to the wide range of items available we've covered some of the more popular below:
+
+Textiles
+
+The diversity in Indonesian textile forms is astounding and is yet another representation of its rich cultural Sample of Batikheritage. Indonesian textiles include hand drawn and stamped batik, the design of which takes months to create; double weave ikat from the islands of Nusa Tenggara, ship cloth from Lampung, silk Bugis sarong from Sulawesi, gold-painted Balinese prada fabric; shimmering kain songket from Palembang utilizing silver and gold metallic threads weft in woven cotton or silk ikat; and Tapis weavings from Lampung.
+
+Weavings from the 27 provinces utilize different materials, methods, colors and designs. Primarily formed on back looms, weeks or months are spent creating intricate designs for everyday use or ceremonial wear. These weavings are primarily known by the different techniques that are used to create the distinctive designs.
+
+The symbolism of the various ethnic groups is evident in the variety of textiles. Color, shapes and their arrangements all have special meanings. Certain designs can only be worn by women or men, or only by the Ikat Textilemembers of the royal family or nobility.
+
+Special textiles are worn or exchanged in life cycle or rights of passage ceremonies celebrating birth, circumcision, puberty, marriage, childbearing and death. Textiles play an important role in many traditional events and ceremonies.
+
+Written records dating to the fourteenth century document the importance of textiles in the social and religious lives of Indonesians. The highly distinctive traditional dress, or pakaian adat, best shows the diversity of uses of textiles throughout the archipelago. The even more elaborate bridal dress displays the best of each province's textile and ornamental jewelry traditions.
+</p>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="footer">
+<center>&copy MUHAMMAD FAISAL AMIR - 6706160014 - D3IF-40-02 - TELKOM UNIVERSITY</center>
+</div>
+</div>
+</body>
+</html>

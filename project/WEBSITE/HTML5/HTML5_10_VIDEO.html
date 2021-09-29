@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<video id = "myVideo" width="1000" controls>
+<source src="Java Beginner 6 - Loops (for, while, do...while).mp4" type="video/mp4">
+</video>
+
+<button onclick="enableLoop()" type="button">Enable loop</button>
+<script>
+var vid = document.getElementById("myVideo");
+
+function enableLoop() {
+vid.loop = true;
+vid.load();
+}
+</script>
+
+</body>
+</html>
